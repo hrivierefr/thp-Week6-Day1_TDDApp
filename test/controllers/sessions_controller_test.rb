@@ -17,3 +17,4 @@ class SessionsControllerTest < ActionDispatch::IntegrationTest
   end
 
 end
+#login, login la personne si elle rentre un bon ID, et lui renvoyer un message d'erreur si elle ne renvoie pas un bon paramètre

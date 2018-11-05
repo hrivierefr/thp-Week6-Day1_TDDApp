@@ -9,9 +9,9 @@ Rails.application.routes.draw do
 	post '/signup', to: 'users#create'
 	get '/club', to: 'users#index', as: 'club'
 
-	get    '/login',   to: 'static#home'
-	post   '/login',   to: 'sessions#create'
-	delete '/logout',  to: 'sessions#destroy'
+	get    '/login', to: 'static#home'
+	post   '/login', to: 'sessions#create'
+	delete '/logout', to: 'sessions#destroy'
 
 	resources :users
 

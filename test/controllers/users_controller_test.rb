@@ -17,3 +17,7 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
   end
 
 end
+
+#Inscription, erreur si la personne n'a pas rentré les bons champs (email en double, paramètre manquant)
+#club, qui ne doit être accessible qu'aux personnes login. 
+#La page doit renvoyer la liste des personnes inscrites au site
