@@ -11,7 +11,7 @@
            <ul class="navbar-nav ml-auto mt-2 mt-lg-0 text-right">
             <% if logged_in? %>
               <li>
-                <%=link_to 'Mon compte', user_path(@current_user.id), class:"nav-item nav-link text-right" %>
+                <%=link_to 'Club', club_path, class:"nav-item nav-link text-right" %>
               </li>
               <li>
                 <%=link_to 'Se déconnecter', logout_path, method: :delete, class:"nav-item nav-link text-right" %>

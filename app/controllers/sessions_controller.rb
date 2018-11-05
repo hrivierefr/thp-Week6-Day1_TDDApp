@@ -7,14 +7,14 @@ class SessionsController < ApplicationController
     	if user
     		if user.authenticate(session_params[:password])
     			log_in(user)
-    			redirect_to user_path(user.id)
+    			redirect_to club_path
     		else
     			flash[:danger] = 'Mot de passe incorrect'
-				render 'new'
+    			redirect_to root_path
     		end
 	    else
 			flash[:danger] = 'Aucun utilisateur enregistré avec cet email'
-			render 'new'
+			redirect_to root_path
 		end
 	end
 

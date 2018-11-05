@@ -1,0 +1,7 @@
+<% if logged_in? %>
+	<%= link_to "Accéder au club", club_path, class: "btn btn-link m-auto" %>
+<% else %>
+	<%= render "sessions/new-session" %>
+<% end %>
+
+

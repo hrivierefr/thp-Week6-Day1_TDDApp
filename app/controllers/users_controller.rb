@@ -1,4 +1,7 @@
 class UsersController < ApplicationController
+
+before_action :set_user, only: [:show]
+
   def new
   end
 
@@ -10,11 +13,19 @@ class UsersController < ApplicationController
     if @user.save
       log_in(@user)
       flash[:success] = "Vous êtes maintenant connecté !"
-      redirect_to user_path(@user)
+      redirect_to club_path
     else
       render 'new'
     end
+  end
 
+  def index
+    if !logged_in?
+      flash[:danger] = "Vous devez vous connecter pour accéder au club"
+      redirect_to login_path
+    else 
+      @users = User.all
+    end
   end
 
 
