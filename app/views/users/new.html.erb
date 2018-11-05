@@ -1,2 +1,11 @@
-<h1>Users#new</h1>
-<p>Find me in app/views/users/new.html.erb</p>
+<div class='offset-4 col-4 text-center'>
+	<%= form_for :user, url: signup_path do |f| %>
+	  	<%= f.text_field :email, placeholder: 'Email', :required => 'required', class:"form-control" %><br />
+	  	<%= f.text_field :first_name, placeholder: "Prénom", :required => 'required', class:"form-control" %><br />
+	  	<%= f.text_field :name, placeholder: "Nom", :required => 'required', class:"form-control" %><br />
+	  	<%= f.password_field :password, placeholder: 'Mot de passe', :required => 'required', class:"form-control" %><br />  
+	  	<%= f.password_field :password_confirmation, placeholder: 'Confirmation', :required => 'required', class:"form-control" %><br />
+	  	<%= f.submit 'Valider mon inscription', class: 'form-group m-auto btn btn-info'%>
+	<% end %>
+
+</div>
